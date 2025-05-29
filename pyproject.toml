@@ -1,0 +1,15 @@
+[project]
+name = "FarmaApp"
+version = "0.1.0"
+description = "تطبيق إدارة المخازن والأصناف"
+requires-python = ">=3.9"
+dependencies = [
+    "flet==0.28.3"
+]
+
+[tool.flet]
+org = "com.salah.farmaapp"
+product = "FarmaApp"
+company = "Salah Abdeldaim"
+copyright = "Copyright (C) 2025 Salah Abdeldaim"
+icon = "assets/icon.png"  # اختياري

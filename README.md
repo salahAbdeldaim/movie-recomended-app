@@ -1,74 +1,84 @@
-🎬 Movie & Series Randomizer | مقترح الأفلام والمسلسلات
+# 🎬 Movie & Series Picker - تطبيق اختيار فيلم أو مسلسل عشوائي
 
-A modern desktop application built with Python and Flet that helps you decide what to watch next! It features a sleek UI to browse, search, and randomly select movies and TV series based on genres.
+<div align="center">
+  <img src="assets/icon.png" width="150" alt="App Logo">
+  <br><br>
+  <b>تطبيق ذكي لاختيار فيلم أو مسلسل عشوائي، مع بحث فوري، اقتراحات تلقائية، وتصميم جذاب باستخدام Flet.</b>
+  <br><br>
 
-تطبيق سطح مكتب عصري مبني باستخدام بايثون ومكتبة Flet، يساعدك في اختيار ما ستشاهده تالياً! يتميز بواجهة مستخدم أنيقة لتصفح، بحث، واختيار أفلام ومسلسلات عشوائية بناءً على التصنيف.
+  <img src="https://img.shields.io/badge/Built%20with-Flet%20(Python)-blue?style=for-the-badge&logo=python" />
+  <img src="https://img.shields.io/badge/Database-SQLite-07405E?style=for-the-badge&logo=sqlite" />
+</div>
 
-✨ Features | المميزات
+---
 
-🎲 Random Pick: Get a random movie or series suggestion with a single click.
+## 📖 نظرة عامة (Overview)
 
-اختيار عشوائي: احصل على اقتراح عشوائي لفيلم أو مسلسل بضغطة زر.
+**Movie & Series Picker** هو تطبيق مكتبي تم تطويره باستخدام **Flet** (Python)،  
+ويقدّم تجربة ممتعة لاختيار أفلام ومسلسلات بشكل عشوائي أو عبر البحث والتصفية حسب النوع.
 
-🔍 Search & Suggestions: Real-time search with auto-complete suggestions.
+يمتاز المشروع بـ:
 
-بحث واقتراحات: بحث فوري مع قائمة اقتراحات تلقائية.
+- بحث فوري مع *اقتراحات تلقائية (Auto Suggestions)*  
+- اختيار عشوائي ذكي بضغط زر  
+- قاعدة بيانات محلية لكل من **movies.db** و **series.db**  
+- تصميم أنيق ومحاذاة RTL كاملة للغة العربية  
+- واجهة تفاعلية وسهلة الاستخدام  
 
-📂 Genre Filtering: Filter content by specific genres (Action, Drama, Comedy, etc.).
+---
 
-تصفية حسب النوع: فلترة المحتوى بناءً على التصنيف (أكشن، دراما، كوميديا، إلخ).
+## ✨ المميزات الرئيسية (Key Features)
 
-🌗 Modern UI: A responsive interface with a custom dark/red theme.
+- 🔍 **بحث لحظي (Real-Time Search)** مع اقتراحات فورية.
+- 🎬 **اختيار عشوائي** لفيلم أو مسلسل حسب النوع أو بدون تصفية.
+- 🎭 **تصفية حسب النوع (Genre Filter)** مع أكثر من 25 نوع.
+- 🗂 **SQLite Database** منفصلة للأفلام والمسلسلات.
+- 🌙 **واجهة حديثة وداعمة للغة العربية بالكامل (RTL)**.
+- 🎨 **تصميم جذاب** باستخدام Flet + ألوان وتأثيرات ظلية.
 
-واجهة عصرية: واجهة متجاوبة مع ثيم مخصص بالألوان الداكنة والأحمر.
+---
 
-💾 Database Integration: Uses SQLite for efficient local data storage.
+## 📸 لقطات شاشة (Screenshots)
 
-قاعدة بيانات: يعتمد على SQLite لتخزين البيانات محلياً بكفاءة.
+| الواجهة الرئيسية | البحث + الاقتراحات | تصفية حسب النوع |
+|:---:|:---:|:---:|
+| <img src="assets/screens/home.png" width="400" /> | <img src="assets/screens/genre.png" width="400" /> | <img src="assets/screens/search.png" width="400" /> |
 
-🚀 Installation | التثبيت والتشغيل
+> *(أضف صورك داخل `assets/screens`)*
+  
+---
 
-Clone the repository | انسخ المستودع
+## 🚀 تشغيل التطبيق (Getting Started)
 
-git clone [https://github.com/YourUsername/movie-randomizer.git](https://github.com/YourUsername/movie-randomizer.git)
-cd movie-randomizer
+### 1️⃣ تثبيت المكتبات المطلوبة
 
-
-Install dependencies | ثبت المكتبات المطلوبة
-
+```bash
 pip install flet
+```
 
+*(المشروع لا يحتاج أي مكتبات خارجية أخرى غير Flet و SQLite المدمج مع Python)*
 
-Run the App | شغل التطبيق
+---
 
+### 2️⃣ تشغيل التطبيق
+
+```bash
 python main.py
+```
 
+---
 
-🗄️ Database Note | ملاحظة بخصوص قاعدة البيانات
+## 🛠️ التقنيات المستخدمة (Tech Stack)
 
-The application automatically creates movies.db and series.db files upon the first run. However, they will be empty initially. You need to populate them with data or use existing database files matching the schema below:
+- **Language:** Python 3.x  
+- **GUI Framework:** Flet  
+- **Database:** SQLite (movies.db + series.db)  
+- **Design:** Custom Theme, RTL Support, Gradients & Shadows  
 
-يقوم التطبيق بإنشاء ملفات قواعد البيانات movies.db و series.db تلقائياً عند التشغيل لأول مرة، لكنها ستكون فارغة. تحتاج إلى ملئها بالبيانات لكي يعمل التطبيق بشكل صحيح، مع الالتزام بالبنية التالية:
+---
 
-CREATE TABLE content (
-    title TEXT,
-    genres TEXT,
-    averageRating REAL,
-    releaseYear INTEGER
-);
+---
 
-
-🛠️ Built With | تم البناء بواسطة
-
-Python - Programming Language.
-
-Flet - The framework for building the UI.
-
-SQLite3 - Database engine.
-
-🤝 Contributing | المساهمة
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
-المساهمات مرحب بها! لا تتردد في فتح Issues أو إرسال Pull Requests.
-
-Developed with ❤️ by Salah Abdeldaim
+<div align="center">
+  Developed with ❤️ by <b>Salah Abdeldaim</b>
+</div>
